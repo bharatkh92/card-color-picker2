@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Input, Text, Image } from "@chakra-ui/react";
+import profile from '../images/profile.png';
 
 function Cards(){
     return(
@@ -16,23 +17,19 @@ function Cards(){
                 <Box w="100px" h="100px" bg="#FED18C" borderRadius="12px 0"></Box>
                 <Box w="100px" h="100px" bg="#DB7F8E" borderRadius="12px 0"></Box>
             </Box>
-            <Box display='flex'>
-                <Box as="div">
-                    <Box w='300px' h='400px'  borderRadius='16px 0'>
-                        <Image
-                            borderRadius='full'
-                            boxSize='150px'
-                            src='./images/profile.png'
-                            alt='Dan Abramov'
-                        />
+            <Box display='flex'  m='10% 0 200px 339px' >
+                <Box as="div" >
+                    <Box display='flex' flexDir='column' justifyContent='space-between' w='300px' h='400px'  borderRadius='16px 0' bgColor="#FF0000" alignItems='center'>
+                        <Image borderRadius='full' mt='31px' boxSize='150px' src={profile} alt='Dan Abramov'/>
+                        <Text color='white' m='10%' fontSize='34px'>Jhon Doe</Text>
                     </Box>
                 </Box>
-                <Box as="div">
-                    <Text>Design my Card</Text>
-                    <Text>Hey there User! Want to build your personalised card? Choose a colour from the palette above and fill your name</Text>
-                    <Text>Your selected colour is #ff0000</Text>
-                    <Text>Name</Text>
-                    <Input size='md' w='328px' bgColor='#DDDDDD' placeholder="Jhon Doe" color='#000000'></Input>
+                <Box as="div" w='329px' textAlign='left' ml='121px'>
+                    <Text fontSize='24px' fontWeight='bold'>Design my Card</Text>
+                    <Text fontSize='12px' mt='13px'>Hey there User! Want to build your personalised card? Choose a colour from the palette above and fill your name</Text>
+                    <Text fontSize='16px' mt='35px'>Your selected colour is <b>#ff0000</b></Text>
+                    <Text fontSize='20px' mt='24px' fontWeight='bold'>Name</Text>
+                    <Input size='md' mt='25px' w='328px' bgColor='#DDDDDD' placeholder="Jhon Doe" color='#000000'></Input>
                 </Box>
 
             </Box>
